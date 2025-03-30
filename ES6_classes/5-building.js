@@ -1,23 +1,16 @@
 export default class Building {
-  constructor(sqft) {
-    if (this.constructor === Building) {
-      throw new Error("Can't instanciate");
-    }
-    this._sqft = sqft;
-  }
-
-  get sqft() {
-    return this._sqft;
-  }
-
-  set sqft(sqft) {
-    if (typeof sqft === 'number') {
+    constructor(sqft) {
+      if (this.constructor === Building) {
+        throw new Error("Can't instantiate");
+      }
       this._sqft = sqft;
     }
-  }
+  
+    get sqft() {
+      return this._sqft;
+    }
 
-  // eslint-disable-next-line class-methods-use-this
-  evacuationWarningMessage() {
-    throw new Error('Class extending Building must override evacuationWarningMessage');
+    evacuationWarningMessage() {
+      throw new Error('Class extending Building must override evacuationWarningMessage');
+    }
   }
-}
