@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-module module module module module
+Main file
 """
 
 from typing import Tuple
