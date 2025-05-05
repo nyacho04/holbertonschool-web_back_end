@@ -4,10 +4,7 @@ Lists all documents in a MongoDB collection.
 """
 
 
-def update_topics(mongo_collection, name, topics):
-    """
-    MongoDB collection update function."""
-    mongo_collection.update_many(
-        {"name": name},
-        {"$set": {"topics": topics}}
-    )
+def schools_by_topic(mongo_collection, topic):
+    """MongoDB"""
+    schools = mongo_collection.find({'topics': topic})
+    return list(schools)
